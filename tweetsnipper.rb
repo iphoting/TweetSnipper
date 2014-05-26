@@ -29,7 +29,7 @@ ht_tl_a = t_client.user_timeline(ENV['TWITTER_USERNAME'], { :trim_user => true, 
 		is_time_hashtag = false
 		if t.hashtags?
 			t.hashtags.each do |ht|
-				is_time_hashtag = true unless (ht.text.to_s =~ /^\d+(?:[mhd])$/).nil?
+				is_time_hashtag = true unless (ht.text.to_s =~ /^\d+[mhd]$/).nil?
 			end
 		end
 		is_time_hashtag
@@ -45,7 +45,7 @@ delete_candidates = ht_tl_a.collect do |t|
 	expired_tweet = false
 	t.hashtags.each do |ht|
 		hashtag = ht.text.to_s
-		unless (hashtag =~ /^\d+(?:[mhd])$/).nil?
+		unless (hashtag =~ /^\d+[mhd]$/).nil?
 			# test for expiry.
 			created_at = t.created_at.to_i
 			elapsed_s = 0
