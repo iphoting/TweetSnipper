@@ -15,13 +15,11 @@ Note: Does not work when deployed on Heroku.
 
 3. Create a `.env` file within the clone with the following details:
 
-```
-TWITTER_USERNAME="username"
-CONSUMER_KEY="API_key..."
-CONSUMER_SECRET="API_secret..."
-ACCESS_TOKEN="12345-xxyyy"
-ACCESS_SECRET="09384xxyy"
-```
+		TWITTER_USERNAME="username"
+		CONSUMER_KEY="API_key..."
+		CONSUMER_SECRET="API_secret..."
+		ACCESS_TOKEN="12345-xxyyy"
+		ACCESS_SECRET="09384xxyy"
 
 4. Use bundler to fetch dependencies.
 
