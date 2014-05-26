@@ -9,7 +9,7 @@
 require 'twitter'
 require 'twitter/entities'
 
-if File.exists?(File.join(Dir.pwd, '.env'))
+if File.exists?(File.join(File.dirname(__FILE__), '.env'))
 	require 'dotenv'
 	Dotenv.load
 end
